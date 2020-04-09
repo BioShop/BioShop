@@ -33,7 +33,7 @@ public class Home extends HttpServlet {
          req.setAttribute("offerte",offerte);
 
 
-        RequestDispatcher dispatcher=
+         RequestDispatcher dispatcher=
                 req.getRequestDispatcher("/WEB-INF/index.jsp");
         dispatcher.forward(req,resp);
 

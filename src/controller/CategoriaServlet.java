@@ -32,7 +32,7 @@ public class CategoriaServlet extends HttpServlet {
         var cD=new CategoriaDAO();
 
 
-        ArrayList<Prodotto> prodotti=new ArrayList<>();
+         ArrayList<Prodotto> prodotti=new ArrayList<>();
         prodotti=(ArrayList<Prodotto>) cD.doRetrieveAllByCat(oggetto);
 
         req.setAttribute("prodotti",prodotti);

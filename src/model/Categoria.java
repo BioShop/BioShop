@@ -35,6 +35,6 @@ public class Categoria {
     }
 
     public void setDescrizione(String descrizione) {
-        this.descrizione = descrizione;
+         this.descrizione = descrizione;
     }
 }

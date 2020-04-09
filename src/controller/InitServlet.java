@@ -15,7 +15,7 @@ import java.util.List;
 public class InitServlet extends HttpServlet {
 
        @Override
-        public void init() throws ServletException {
+         public void init() throws ServletException {
             CategoriaDAO categoriaDAO = new CategoriaDAO();
             List<Categoria> categorie = categoriaDAO.doRetrieveAll();
             getServletContext().setAttribute("categorie", categorie);

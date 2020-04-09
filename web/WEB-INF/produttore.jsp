@@ -22,7 +22,7 @@
 <% for(int i=0;i<prodotti.size();i++){%>
 
 
-    <img src="<%=prodotti.get(i).getImmagine()%>"><br>
+     <img src="<%=prodotti.get(i).getImmagine()%>"><br>
 <li>
     <%=prodotti.get(i).getNome()%>
     <%=prodotti.get(i).getPrezzo()%>€

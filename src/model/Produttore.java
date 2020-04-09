@@ -10,7 +10,7 @@ public class Produttore {
     public Produttore(){};
 
     public Produttore(String pIva,String nome,String via,int CAP,String citta){
-            this.pIva=pIva;
+             this.pIva=pIva;
             this.CAP = CAP;
             this.citta = citta;
             this.nome = nome;

@@ -29,7 +29,7 @@ public class ProduttoreServlet extends HttpServlet {
         var pD=new ProduttoreDAO();
 
 
-        ArrayList<Prodotto> prodotti=new ArrayList<>();
+         ArrayList<Prodotto> prodotti=new ArrayList<>();
         prodotti=(ArrayList<Prodotto>) pD.doRetrieveAllByProduttore(oggetto);
 
         req.setAttribute("prodotti",prodotti);

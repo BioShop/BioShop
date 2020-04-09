@@ -96,7 +96,7 @@ public class ProdottoDAO {
 
             while(rs.next()) {
                 Prodotto prodotto=new Prodotto(); //creo il nuovo prodotto che prende gli attributi dal db
-                prodotto.setId(rs.getInt(1));
+                 prodotto.setId(rs.getInt(1));
                 prodotto.setProduttore(rs.getString(2));
                 prodotto.setCategoria(rs.getInt(3));
                 prodotto.setNome(rs.getString(4));

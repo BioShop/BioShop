@@ -54,7 +54,7 @@
             <% };%>
 
         </select>
-        <input type="submit" value="Visualizza"> <br>
+        <input type="submit" value="Visualizza">  <br>
     </form>
 
 
