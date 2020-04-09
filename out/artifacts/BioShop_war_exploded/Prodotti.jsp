@@ -20,31 +20,72 @@
 </head>
 <body>
 
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">WebSiteName</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="Prodotti.jsp">Prodotti</a></li>
+                <li><a href="ShowAllProduttori.jsp">Produttori</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<% ArrayList<Categoria> categorie=(ArrayList<Categoria>)getServletConfig().getServletContext().getAttribute("categorie");%>
 
 
+<form action="CategoriaServlet">
+    <select id="cat" name="cat">
+
+        <% for(int i=0;i<categorie.size();i++)
+        {
+            int id=categorie.get(i).getId();
+            String nome=categorie.get(i).getNome();%>
+        <option value="<%=id%>">"<%=nome%>"</option>
+        <% };%>
+
+    </select>
+
+    <input type="submit" value="cerca">
+
+</form>
 
 
     <%  ProdottoDAO pD=new ProdottoDAO();
         ArrayList<Prodotto> prodotti=new ArrayList<>();
         prodotti=pD.doRetrieveAll();
         for(int i=0;i<prodotti.size();i++){%>
-
-
+<div class="container-fluid">
     <div class="row">
-        <div class="col-md-4">
-            <div class="thumbnail">
-                <a href="<%=prodotti.get(i).getImmagine()%>">
-                    <img src="<%=prodotti.get(i).getImmagine()%>" alt="Lights" style="width:100%">
-                    <div class="caption">
-                        <p><%= prodotti.get(i).getNome() %> <%= prodotti.get(i).getPrezzo()%>€</p>
+            <div class="col-md-3">
+                <div class="thumbnail">
 
-                        <form action="Delete">
-                            <input type="submit" value="delete" >
-                        </form>
-                    </div>
-                </a>
+                        <img src="<%=prodotti.get(i).getImmagine()%>"  style="width:25%">
+                        <div class="caption">
+                            <p><%= prodotti.get(i).getNome() %> <%= prodotti.get(i).getPrezzo()%>€</p>
+
+                            <form action="Delete">
+                                <input type="submit" value="delete" >
+                            </form>
+                        </div>
+                    </a>
+                </div>
             </div>
-        </div>
+
+    </div>
 
 
 
