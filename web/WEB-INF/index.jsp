@@ -54,7 +54,7 @@
             {
                 String pIva=produttori.get(i).getpIva();
                 String nome=produttori.get(i).getNome();%>
-            <option value="<%=pIva%>">"<%=nome%>"</option>
+            <option value="<%=pIva%>">"<%=nome%>" </option>
             <% };%>
 
         </select>
