@@ -20,7 +20,7 @@ public class ConPool {
 
              p.setDriverClassName("com.mysql.cj.jdbc.Driver");
             p.setUsername("root");
-            p.setPassword("Dimentico98!");
+            p.setPassword("956842");
             p.setMaxActive(100);
             p.setInitialSize(10);
             p.setMinIdle(10);
